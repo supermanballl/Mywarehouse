@@ -1,0 +1,157 @@
+page {
+  background-color: #edece8;
+}
+.address {
+  display: flex;
+  background-color: #fff;
+  margin-top: 30rpx;
+  margin-left: 30rpx;
+  margin-right: 30rpx;
+  padding-top: 30rpx;
+  padding-bottom: 30rpx;
+  border-radius: 30rpx;
+}
+.address .img {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.address .text {
+  flex: 5;
+}
+.address .text .didian {
+  font-size: 30rpx;
+}
+.address .text .name {
+  margin-top: 20rpx;
+  color: #676767;
+}
+.address .gotoaddress {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.dingdan {
+  background-color: #fff;
+  margin-top: 30rpx;
+  margin-left: 30rpx;
+  margin-right: 30rpx;
+  padding-top: 30rpx;
+  padding-bottom: 130rpx;
+  border-radius: 30rpx;
+}
+.dingdan .goods_msg {
+  height: 200rpx;
+  display: flex;
+}
+.dingdan .goods_msg .img {
+  flex: 3;
+  border-radius: 30rpx;
+  background-color: #bf3535;
+  overflow: hidden;
+  margin-left: 30rpx;
+}
+.dingdan .goods_msg .img image {
+  width: 100%;
+  height: 100%;
+}
+.dingdan .goods_msg .goods_text {
+  flex: 6;
+  margin-left: 20rpx;
+}
+.dingdan .goods_msg .goods_text .goods_name {
+  font-size: 35rpx;
+  font-weight: bolder;
+  margin-bottom: 20rpx;
+}
+.dingdan .goods_msg .goods_text .goods_introduce {
+  display: -webkit-box;
+  text-align: right;
+  color: #5e5e5e;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-box-orient: vertical;
+  word-break: break-all;
+  color: #7e7e7e;
+}
+.dingdan .goods_msg .price {
+  flex: 2;
+  margin-right: 10rpx;
+  font-size: 30rpx;
+  color: #ff0000;
+}
+.dingdan .num {
+  display: flex;
+  margin-top: 50rpx;
+  margin-left: 30rpx;
+}
+.dingdan .num .num_text {
+  flex: 3;
+  font-size: 30rpx;
+}
+.dingdan .num .cart_num_tool {
+  flex: 3;
+  margin-left: 40%;
+  display: flex;
+}
+.dingdan .num .cart_num_tool .num_edit {
+  width: 55rpx;
+  height: 55rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1rpx solid #ccc;
+}
+.dingdan .num .cart_num_tool .goods_num {
+  width: 55rpx;
+  height: 55rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.dingdan .remark {
+  margin-top: 50rpx;
+  margin-left: 30rpx;
+  display: flex;
+}
+.dingdan .remark .remarktext {
+  flex: 2;
+  font-size: 30rpx;
+}
+.dingdan .remark .text {
+  flex: 5;
+  display: -webkit-box;
+  text-align: right;
+  color: #5e5e5e;
+  -webkit-line-clamp: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-box-orient: vertical;
+  word-break: break-all;
+}
+.dingdan .remark .jiantou {
+  flex: 1;
+}
+.pay {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 100rpx;
+  background-color: #fff;
+  display: flex;
+}
+.pay .pagbtn {
+  margin-left: 5%;
+  width: 90%;
+  height: 90%;
+  background-color: #29a784;
+  border-radius: 30rpx;
+  color: #fff;
+  font-size: 35rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

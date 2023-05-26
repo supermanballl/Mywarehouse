@@ -1,0 +1,21 @@
+{
+  "devDependencies": {
+    "mini-program-iconfont-cli": "^0.6.1"
+  },
+  "dependencies": {
+    "qqmap-wx-jssdk": "^1.0.0",
+    "weui-miniprogram": "^1.2.7"
+  },
+  "name": "weui",
+  "version": "1.0.0",
+  "main": ".eslintrc.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}

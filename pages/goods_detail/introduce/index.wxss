@@ -1,0 +1,53 @@
+.icon_img image {
+  width: 100%;
+  height: 500rpx;
+}
+.content {
+  margin-left: 30rpx;
+  margin-right: 30rpx;
+}
+.content .title {
+  margin-top: 100rpx;
+  margin-bottom: 50rpx;
+  font-size: 40rpx;
+  font-weight: bold;
+}
+.content .text .text_txt {
+  font-size: 30rpx;
+  text-indent: 2em;
+  line-height: 60rpx;
+}
+.content .text .text_img {
+  margin-top: 50rpx;
+  margin-bottom: 50rpx;
+  margin-left: -30rpx;
+}
+.back {
+  height: 100rpx;
+  border-radius: 30rpx;
+  margin-left: 7%;
+  margin-right: 7%;
+  color: #ffffff;
+  font-size: 35rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to right, #19eda6, #17b4bd);
+}
+.back .gifshow1 {
+  margin-right: 10rpx;
+  width: 64rpx;
+}
+.back .gifshow2 {
+  margin-left: 10rpx;
+  width: 64rpx;
+}
+.picture {
+  column-gap: 5rpx;
+  column-count: 2;
+  padding: 10rpx 10rpx 10rpx 15rpx;
+}
+.item {
+  width: 99%;
+  break-inside: avoid;
+}

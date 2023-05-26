@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "headerNav":"../../components/headerNav/headerNav"
+  }
+
+
+}

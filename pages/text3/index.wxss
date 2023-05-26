@@ -1,0 +1,51 @@
+/* @import '../common.wxss'; */
+
+page{
+    background-color: black;
+    height: 100%;
+}
+
+mp-video-swiper {
+    width: 100%;
+    height: 100%;
+}
+.imagePlayer{
+  width: 40px;
+  height: 40px;
+  position: fixed;
+  z-index: 1000;
+  opacity: 0.6
+}
+.viewFloat{
+  position: fixed;
+  display: flex;
+  z-index: 100;
+  width: 500rpx;
+  bottom: 60px;
+  color: white;
+  margin:20rpx; 
+  flex-direction: column
+
+}
+.videoTitle{
+  font-size: 18px;
+  font-weight: 500;
+
+}
+.videoDes{
+  font-size: 14px;
+}
+.viewTabContainer{
+  position: fixed;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row;
+  width: 100%;
+  height: 50px;
+  border-top: 0.5px solid white;
+  bottom: 0;
+}
+.viewTab{
+  color: white;
+}

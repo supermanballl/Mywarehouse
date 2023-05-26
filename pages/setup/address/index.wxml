@@ -1,0 +1,57 @@
+<!-- 悬浮球 -->
+<view
+  id="view1"
+  class="btn_Suspension"
+  bindtap="btn_click"
+  catchtouchmove="buttonMove"
+  bindtouchstart="buttonStart"
+  bindtouchend="buttonEnd"
+  style="top:{{top}}rpx;left:{{left}}rpx;"
+>
+  <image
+    class=""
+    src="http://47.92.30.79/images/user/加号.png"
+    width="40%"
+    mode="widthFix"
+  />
+</view>
+
+<!-- 收货地址列表 -->
+<view wx:if="{{yesAddress}}">
+  <view
+    class="forData"
+    wx:for="{{address}}"
+    wx:key="{{item.id}}"
+  >
+    <view class="addressitem">
+      <view class="addressMsg">
+        <view class="obscure_address">{{item.province+" "+item.city+" "+item.district+" "+item.remark}}</view>
+        <view class="personMsg">
+          <view class="contact_name">{{item.name}}</view>
+          <view class="phone">{{item.phone}}</view>
+        </view>
+      </view>
+      <view
+        class="edit"
+        bindtap="btn_Edit"
+        data-addressid="{{item.addressid}}"
+      >
+        <image
+          class="edit_img"
+          src="http://47.92.30.79/images/user/编辑.png"
+          mode="widthFix"
+        />
+      </view>
+    </view>
+  </view>
+</view>
+
+<!-- 无收货地址 -->
+<view wx:else>
+  <image
+    class="noAddressImg"
+    src=""
+    mode="aspectFit"
+  />
+</view>
+

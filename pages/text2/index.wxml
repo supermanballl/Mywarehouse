@@ -1,0 +1,70 @@
+<view>
+  <swiper
+    style="{{('width: '+windowWidth+'px; height: '+windowHeight+'px; background-color: #000000;')}}"
+    vertical="{{true}}"
+    current="{{current}}"
+    indicator-dots="{{false}}"
+    data-event-opts="{{[['animationfinish',[['animationfinish',['$event']]]],['change',[['change',['$event']]]]]}}"
+    bindanimationfinish="__e"
+    bindchange="__e"
+  >
+    <block
+      wx:for="{{$root.l0}}"
+      wx:for-item="list"
+      wx:for-index="index"
+      wx:key="index"
+    >
+      <swiper-item>
+        <block wx:if="{{list.g0<=1}}">
+          <view>
+            <view>
+              <block wx:if="{{isShow}}">
+                <video
+                  style="{{('width: '+windowWidth+'px; height: '+windowHeight+'px; background-color: #000000; z-index: -1;')}}"
+                  id="{{list.$orig._id+''+index}}"
+                  loop="{{true}}"
+                  controls="{{false}}"
+                  http-cache="{{true}}"
+                  page-gesture="{{false}}"
+                  show-fullscreen-btn="{{false}}"
+                  show-loading="{{false}}"
+                  show-center-play-btn="{{false}}"
+                  enable-progress-gesture="{{false}}"
+                  src="{{list.$orig.src}}"
+                  poster="{{list.$orig.src+'?x-oss-process=video/snapshot,t_100,f_jpg'}}"
+                  data-event-opts="{{[['ended',[['ended',['$event']]]],['tap',[['tapVideoHover',['$0','$event'],[[['dataList','',index,'state']]]]]]]}}"
+                  muted="{{list.$orig.isplay}}"
+                  bindended="__e"
+                  bindtap="__e"
+                ></video>
+              </block>
+              <block wx:if="{{!list.$orig.playIng}}">
+                <image
+                  style="{{('width: '+windowWidth+'px; height: '+windowHeight+'px; position: absolute;')}}"
+                  src="{{list.$orig.src+'?x-oss-process=video/snapshot,t_100,f_jpg'}}"
+                  mode="aspectFit"
+                ></image>
+              </block>
+            </view>
+            <view
+              data-event-opts="{{[['tap',[['tapVideoHover',['$0','$event'],[[['dataList','',index,'state']]]]]]]}}"
+              class="videoHover"
+              style="{{('width: '+windowWidth+'px; height: '+windowHeight+'px;')}}"
+              bindtap="__e"
+            >
+              <block wx:if="{{list.$orig.state=='pause'}}">
+                <image class="playState" src="/static/img/index/play.png"></image>
+              </block>
+            </view>
+
+            <view class="content">
+              <text class="userName" style="{{('width: '+(windowWidth-90)+'px;')}}">{{list.$orig.title}}</text>
+              <text class="words" style="{{('width: '+(windowWidth-90)+'px;')}}">{{list.$orig.msg+"-"+(k+1)}}</text>
+            </view>
+          </view>
+        </block>
+      </swiper-item>
+    </block>
+  </swiper>
+</view>
+

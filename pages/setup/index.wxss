@@ -1,0 +1,76 @@
+page {
+  padding-bottom: 90rpx;
+  background-color: #edece8;
+}
+.revice_address_row .address_btn {
+  margin-top: 30rpx;
+  margin-left: 10%;
+  margin-right: 10%;
+  width: 90%;
+  height: 100rpx;
+  background-color: #fff;
+  border-radius: 30rpx;
+  display: flex;
+}
+.revice_address_row .address_btn .addbtn_text {
+  flex: 1;
+  float: left;
+  margin-left: 30rpx;
+  font-size: 35rpx;
+}
+.revice_address_row .address_btn .btn_jiantou {
+  flex: 1;
+  float: right;
+  margin-right: 30rpx;
+  font-size: 25rpx;
+  text-align: center;
+}
+.revice_address_row .user_info_row {
+  display: flex;
+  padding: 20rpx;
+}
+.revice_address_row .user_info_row .user_info {
+  flex: 5;
+}
+.revice_address_row .user_info_row .user_phone {
+  flex: 3;
+  text-align: right;
+}
+.my_address {
+  margin-top: 30rpx;
+  margin-bottom: 30rpx;
+  width: 90%;
+  height: 100rpx;
+  border-radius: 20rpx;
+  background-color: #ffffff;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+.my_address .address_text {
+  display: flex;
+}
+.my_address .address_text .text1 {
+  margin-top: 30rpx;
+  margin-left: 20rpx;
+  font-size: 33rpx;
+  flex: 6;
+  text-align: left;
+}
+.my_address .address_text .text2 {
+  color: #999999;
+  margin-top: 30rpx;
+  flex: 3;
+  z-index: 999;
+  text-align: right;
+}
+.my_address .address_text .text3 {
+  z-index: 9999;
+  flex: 0.5;
+  font-size: 20rpx;
+  text-align: right;
+  margin-top: 30rpx;
+  margin-right: 20rpx;
+}

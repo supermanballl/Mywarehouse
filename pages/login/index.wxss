@@ -1,0 +1,5 @@
+/* pages/login/index.wxss */
+button{
+    position: relative;
+    top: 20rpx;
+}

@@ -1,0 +1,21 @@
+<view class="serch_row">
+  <input
+    value="{{value}}"
+    placeholder="请输入搜索内容"
+    bindinput="put"
+  ></input>
+  <button hidden="{{!isFocus}}" bindtap="handleCancel">取消</button>
+</view>
+
+<view class="serch_content">
+  <view wx:for="{{a}}" wx:key="*this">
+    <view
+      data-id="{{item.goods_id}}"
+      class="serch_item"
+      bindtap="gotoDetail"
+    >{{item.goods_title}}
+    </view>
+  </view>
+
+</view>
+

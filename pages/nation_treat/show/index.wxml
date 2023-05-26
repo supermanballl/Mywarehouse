@@ -1,0 +1,52 @@
+<image
+  class="top_img"
+  src="{{list.img}}"
+  mode="aspectFill"
+/>
+
+<view class="title_box">
+  <view class="imgs">
+    <image
+      class="left_return"
+      src="http://47.92.30.79/images/nation_treat/箭头.png"
+      mode="aspectFit"
+      bindtap="goToLast"
+    />
+    <image
+      class="show_gif"
+      src="http://47.92.30.79/images/cart/2.gif"
+      mode="aspectFit"
+    />
+  </view>
+
+  <view class="title_txt">{{list.txt}}</view>
+</view>
+<view class="txt_box">
+  <view class="padding">
+    <rich-text class="richtxt" nodes="{{list.richtext}}">
+
+    </rich-text>
+  </view>
+
+  <!-- <view class="i"></view>
+  <view class="title_introduce">
+    {{treat.title_txt}}
+  </view>
+  <view
+    class="txt_viewfor"
+    wx:for="{{treat.h1}}"
+    wx:key="*this"
+  >
+    <view class="txt_title1">
+      {{item.txt_h2}}
+    </view>
+    <view class="txt">{{item.txt}}</view>
+    <image
+      class=""
+      src="{{item.txt_img}}"
+      mode="aspectFit"
+    />
+  </view> -->
+
+</view>
+

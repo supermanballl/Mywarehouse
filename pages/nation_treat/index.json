@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "find":"../../components/find"
+  },
+  "navigationBarTitleText": "民族诊疗"
+}

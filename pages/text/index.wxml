@@ -1,0 +1,14 @@
+<navigator url="plugin://kdPlugin/index?num=773170860329356&appName=花鉴程序">123</navigator>
+<button bindtap="goPay">支付 0.01 元</button>
+
+<button id="btn1" open-type="share">
+  <image class="icon_btn" src="http://47.92.30.79/image/cart_img/分享.png" />
+</button>
+
+<view class="btn1" open-type="share">
+
+</view>
+
+
+
+

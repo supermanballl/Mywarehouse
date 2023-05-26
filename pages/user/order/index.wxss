@@ -1,0 +1,160 @@
+.tab-h {
+  height: 80rpx;
+  width: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
+  line-height: 80rpx;
+  background: #ffffff;
+  font-size: 16px;
+  white-space: nowrap;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99;
+}
+.tab-item {
+  margin: 0 36rpx;
+  display: inline-block;
+}
+.tab-item.active {
+  color: #4675f9;
+  position: relative;
+}
+.tab-item.active:after {
+  content: "";
+  display: block;
+  height: 8rpx;
+  width: 100%;
+  background: #f9ae46;
+  position: absolute;
+  bottom: 0;
+  border-radius: 16rpx;
+}
+
+.tab-content {
+  margin-top: 80rpx;
+  width: 100%;
+  /* height: 2000rpx; */
+}
+page {
+  background-color: #edece8;
+}
+.page_position {
+}
+.swiper_item {
+  background-color: #b81212;
+  width: 90%;
+  height: 400rpx;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px;
+  -webkit-box-shadow: #1d1c1c 0px 0px 10px;
+  -moz-box-shadow: #242424 0px 0px 10px;
+  box-shadow: #1f1f1f 0px 0px 10px;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 40rpx;
+  overflow: hidden;
+}
+.dditem {
+  width: 90%;
+  /* height: 400rpx; */
+  border-radius: 30rpx;
+  background-color: #fff;
+  padding-bottom: 30rpx;
+  margin-top: 30rpx;
+  margin-left: 5%;
+  justify-content: center;
+  align-items: center;
+}
+.status {
+  text-align: right;
+  padding-top: 30rpx;
+  margin-right: 30rpx;
+  font-size: 30rpx;
+  color: #ffa71a;
+}
+
+.dditem_left {
+  height: 200rpx;
+  display: flex;
+  margin-top: 30rpx;
+  margin-left: 30rpx;
+  margin-right: 30rpx;
+}
+.img {
+  flex: 3;
+
+  background-color: rgb(120, 92, 92);
+  border-radius: 20rpx;
+  margin: 5rpx 5rpx 5rpx 5rpx;
+  overflow: hidden;
+}
+.text {
+  flex: 5;
+  margin-left: 20rpx;
+}
+.goodstitle {
+  font-size: 35rpx;
+  font-weight: 550;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 0 20rpx;
+}
+.goodsmsg {
+  font-size: 28rpx;
+  font-weight: 400;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 0 20rpx;
+  color: rgb(87, 87, 87);
+  margin-right: 30rpx;
+  display: -webkit-box;
+  word-break: break-all; /*换行规则*/
+  text-overflow: ellipsis; /*最后使用省略号显示*/
+  overflow: hidden; /*超出部分隐藏*/
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3; /*能够显示几行*/
+  line-height: 20px; /*行高，固定写死。后续将会使用它*/
+}
+.itemmsg {
+  flex: 1;
+}
+.price {
+  display: flex;
+}
+.DDnumber {
+  display: flex;
+}
+.DDtime {
+  display: flex;
+}
+.address {
+  display: flex;
+}
+.lefttext {
+  flex: 1;
+  margin-top: 30rpx;
+  margin-left: 30rpx;
+  font-size: 30rpx;
+  font-weight: 550;
+}
+.righttext {
+  flex: 1;
+  margin-top: 30rpx;
+  margin-right: 30rpx;
+  font-size: 28rpx;
+  font-weight: 500;
+  color: rgb(87, 87, 87);
+  text-align: right;
+}
+.pricetext {
+  flex: 1;
+  margin-top: 30rpx;
+  margin-right: 30rpx;
+  font-size: 40rpx;
+  font-weight: 500;
+  color: rgb(255, 91, 15);
+  text-align: right;
+}

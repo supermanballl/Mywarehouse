@@ -1,0 +1,110 @@
+{
+  "pages":[
+     "pages/text1/index",
+		"pages/front_page/index",
+		"pages/nation_treat/index",
+		"pages/nation_treat1/index",
+		"pages/cart/index",
+    "pages/user/index",
+    "pages/text/index",
+		"pages/goods_detail/index",
+		"pages/p_video/index",
+    "pages/yangsheng/index",
+    "pages/yangsheng1/index",
+		"pages/login/index",
+		"pages/shouchang/index",
+    "pages/setup/index",
+		"pages/search/index",
+		"pages/news/index",
+		"pages/news/new_detail/index",
+    "pages/user/order/index",
+    "pages/goods_detail/introduce/index",
+    "pages/nation_treat/show/index",
+    "pages/text2/index",
+    "pages/text3/index",
+    "pages/feedback/index",
+		"pages/setup/address/index",
+    "pages/setup/addressEdit/index",
+    "pages/setup/addressEdit1/index",
+    "pages/historySee/index",
+    "pages/payDetail/index",
+    "pages/payDetail/addressChoose/index",
+    "pages/payDetail/dingdan/index",
+    "pages/aaaademo/index",
+    "pages/dianzan/index",
+    "pages/fenxiang/index",
+    "libs/citySelector/switchcity/switchcity"
+
+  ],
+  "usingComponents":{
+    "iconfont":"/iconfont/iconfont"
+  },
+	
+	"tabBar": {
+    "color":"8a8a8a",
+    "selectedColor":"29a784",
+    "backgroundColor": "#fafafa",
+    "position": "bottom",
+    "borderStyle": "black",
+    "list": [
+      {
+        "pagePath": "pages/front_page/index",
+        "text": "首页",
+        "iconPath": "img/首页未选中.png",
+        "selectedIconPath": "img/首页选中.png"
+      },
+      {
+        "pagePath": "pages/nation_treat/index",
+        "text": "民族诊疗", 
+        "iconPath": "img/民族诊疗未选中.png",
+        "selectedIconPath": "img/民族诊疗选中.png"
+      },
+      {
+        "pagePath": "pages/cart/index",
+        "text": "购物车",
+        "iconPath": "img/购物车未选中.png",
+        "selectedIconPath": "img/购物车选中.png"
+      },
+      {
+        "pagePath": "pages/user/index",
+        "text": "我的",
+        "iconPath": "img/我的未选中.png",
+        "selectedIconPath": "img/我的选中.png"
+      }
+    ]
+  },
+  
+    "plugins": {
+      "citySelector": {
+        "version": "1.0.2",
+        "provider": "wx63ffb7b7894e99ae"
+      },
+      "kdPlugin": {
+        "version": "1.1.2",
+        "provider": "wx6885acbedba59c14"
+      }
+  },
+
+  
+    "permission": {
+      "scope.userFuzzyLocation": {
+        "desc": "你的位置信息将用于小程序定位"
+      }
+    },
+  
+	
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#29a784",
+    "navigationBarTitleText": "Weixin",
+    "navigationBarTextStyle":"black"
+  },
+  "requiredPrivateInfos":[
+    "choosePoi",
+    "chooseAddress",
+    "getFuzzyLocation",
+    "chooseLocation"
+    ],
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

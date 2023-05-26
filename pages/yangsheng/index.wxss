@@ -1,0 +1,215 @@
+.account-info-item {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  height: 90rpx;
+  margin-left: 50rpx;
+  border-bottom: 1px solid #eee;
+  font-size: 35rpx;
+  font-family: serif;
+}
+
+
+/* 侧边栏样式 */
+.page-slidebar {
+    height: 100%;
+    width: 65%;
+    position: fixed;
+    background-color:white;
+    z-index: 0;
+}
+ /* 主页样式 */
+.page-top {
+    height: 100%;
+    /* position: relative; */
+    width: 100%;
+    background-color:white;
+    z-index: 0;
+    transition: All 0.4s ease;
+    -webkit-transition: All 0.4s ease;
+}
+
+/* 控制侧边栏的内容距离顶部的距离 */
+.page-content {
+    /* padding-top: 60rpx; */
+}
+
+/* 当屏幕向左滑动，出现侧边栏的时候，主页的动画样式 */
+/* scale：取值范围 0~1 ，表示屏幕大小是原来的百分之几，可以自己修改成 0.8 试下*/
+/* translate(60%,0%) 表示向左滑动的时候，侧边栏占用平时的宽度为 60%   */
+.c-state {
+    transform: rotate(0deg) scale(1) translate(65%, 0%);
+    -webkit-transform: rotate(0deg) scale(1) translate(65%, 0%);
+}
+
+.floatbutton {
+  position: fixed;
+  width: 100rpx;
+  height: 100rpx;
+  bottom: 140rpx;
+  left: 40rpx;
+  z-index: 9999;
+}
+
+.c-button-open {
+  /* transform: rotate(90deg) scale(1) translate(30%, 100rpx); */
+  -webkit-transform: rotate(180deg) scale(1) translate(30%, 215rpx);
+  transition-duration:0.5s;
+  -webkit-transition-duration: 0.5s;
+  left: 20%;
+  top: 10%;
+}
+
+/* 遮盖层样式 */
+.cover{
+    width: 100%;
+    height: 100%;
+    background-color:gray;
+    opacity: 0.5;
+    z-index: 9000;
+}
+
+.quit-view {
+  height: 5%;
+  width: 65%;
+}
+
+.quit-btn {
+  position: relative;
+  bottom: 5rpx;
+  z-index: 999;
+  color: #fff;
+  width: 65%;
+  border-radius: 5rpx;
+  background-color: #064acb;
+}
+.context {
+  width: 100%;
+  position: relative;
+  top: -30rpx;
+  background-color: #fff6c0;
+  border-radius: 30rpx 30rpx 0rpx 0rpx;
+}
+.context .title {
+  padding-top: 50rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 60rpx;
+  font-family: cursive;
+  font-weight: bolder;
+  /*设置字体粗细*/
+}
+.context .title_text {
+  text-indent: 40rpx;
+  line-height: 70rpx;
+  font-size: 30rpx;
+  margin-left: 50rpx;
+  margin-right: 50rpx;
+  font-family: 'Courier New', Courier, monospace;
+}
+.context .function1_title {
+  padding-top: 50rpx;
+  padding-bottom: 50rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 60rpx;
+  font-family: cursive;
+  font-weight: bolder;
+  /*设置字体粗细*/
+}
+.context .rich1 {
+  margin-left: 50rpx;
+  margin-right: 50rpx;
+}
+.bg {
+  width: 100%;
+  height: 250rpx;
+  background-color: #555555;
+  text-align: center;
+}
+.position{
+  position: relative;
+    left:50%;
+    top:50%;
+    transform: translate(-50%, -50%);
+}
+.bg .time_view {
+  width: 70%;
+  height: 250rpx;
+  margin-left: 15%;
+  border-radius: 50rpx 50rpx 0rpx 0rpx;
+  background-color: #00b271;
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+  
+  font-size: 40rpx;
+  font-family: cursive;
+  font-weight: bolder;
+  /*设置字体粗细*/
+  color: #FFFFFF;
+  /*设置文字颜色*/
+  cursor: pointer;
+  /*设置光标形状*/
+  -webkit-animation: light 1.5s ease-in-out infinite alternate;
+  /*设置动画*/
+}
+.txt1{
+  font-size: 30rpx;
+  font-family: cursive;
+  font-weight: bolder;
+  /*设置字体粗细*/
+  color: #FFFFFF;
+}
+.txt2{
+  font-size: 30rpx;
+  font-family:'Times New Roman', Times, serif;
+  /* font-weight: bolder; */
+  /*设置字体粗细*/
+  color: #FFFFFF;
+}
+ /* @-webkit-keyframes light {
+ 创建动画
+  from {
+    text-shadow: 0 0 1px #fff,
+                           0 0 1px #fff,
+                           0 0 1px #fff,
+                           0 0 2px #a4ff89,
+                           0 0 4px #a4ff89,
+                           0 0 6px #a4ff89,
+                           0 0 8px #a4ff89,
+                           0 0 10px #a4ff89;
+  }
+  to {
+    text-shadow: 0 0 1px #fff,
+                           0 0 0.5px #fff,
+                           0 0 0.5px #fff,
+                           0 0 1px #a4ff89,
+                           0 0 2px #a4ff89,
+                           0 0 3px #a4ff89,
+                           0 0 4px #a4ff89,
+                           0 0 5px #a4ff89;
+  }
+}*/
+.floatbutton{
+  position:absolute;
+  top: 250rpx;
+  left: 50rpx;
+  opacity: 0.5;
+  width: 50rpx;
+  height: 50rpx;
+}
+.floatbutton1{
+  margin-left: 100rpx;
+  margin-top: 30rpx;
+  opacity: 0.5;
+  width: 300rpx;
+  height: 50rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 40rpx;
+  
+}

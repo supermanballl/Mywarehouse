@@ -1,0 +1,27 @@
+<!-- 清除缓存结束 -->
+
+<view class="my_address" bindtap="goToAddressSet">
+  <view class="address_text">
+    <view class="text1">收货地址</view>
+    <view
+      class="text2"
+      bindtap="goToOrder"
+      data-id="0"
+    >添加/修改
+    </view>
+    <view
+      class="text3"
+      bindtap="goToOrder"
+      data-id="0"
+    >
+      <image
+        src="http://47.92.30.79/images/user/向右箭头.png"
+        mode="aspectFit"
+        style="width: 80%; height: 80%"
+      />
+    </view>
+  </view>
+</view>
+<!-- 清除缓存开始 -->
+<button bindtap="clearAllStorage">清除缓存</button>
+

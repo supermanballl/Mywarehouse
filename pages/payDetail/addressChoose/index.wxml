@@ -1,0 +1,33 @@
+<!-- 收货地址列表 -->
+<view wx:if="{{yesAddress}}">
+  <view
+    class="forData"
+    wx:for="{{address}}"
+    wx:key="{{item.addressid}}"
+  >
+    <view
+      class="addressitem"
+      data-id="{{item.addressid}}"
+      bindtap="isChoose"
+    >
+      <view class="addressMsg">
+        <view class="obscure_address">{{item.province+" "+item.city+" "+item.district+" "+item.remark}}</view>
+        <view class="personMsg">
+          <view class="contact_name">{{item.name}}</view>
+          <view class="phone">{{item.phone}}</view>
+        </view>
+      </view>
+    </view>
+
+  </view>
+</view>
+
+<!-- 无收货地址 -->
+<view wx:else>
+  <image
+    class="noAddressImg"
+    src=""
+    mode="aspectFit"
+  />
+</view>
+

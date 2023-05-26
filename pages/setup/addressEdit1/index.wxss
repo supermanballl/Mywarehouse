@@ -1,0 +1,126 @@
+.addr_fm .name {
+  display: flex;
+  margin-top: 30rpx;
+  margin-left: 30rpx;
+  margin-right: 30rpx;
+}
+.addr_fm .name .name_text {
+  flex: 1;
+  font-size: 33rpx;
+  padding: 10rpx 0;
+}
+.addr_fm .name .input_name {
+  height: 80rpx;
+  border-radius: 20rpx;
+  background-color: #f0f0f0;
+  flex: 3;
+  padding-left: 30rpx;
+  font-size: 26rpx;
+}
+.addr_fm .area {
+  display: flex;
+  margin-top: 30rpx;
+  margin-left: 30rpx;
+  margin-right: 30rpx;
+}
+.addr_fm .area .area_text {
+  flex: 1;
+  font-size: 33rpx;
+  padding: 10rpx 0;
+}
+.addr_fm .area .input_area {
+  margin-left: 10rpx;
+  height: 80rpx;
+  border-radius: 20rpx;
+  background-color: #f0f0f0;
+  flex: 3;
+  padding-left: 30rpx;
+  font-size: 26rpx;
+}
+.addr_fm .area .dingwei {
+  width: 50rpx;
+  height: 50rpx;
+  padding: 10rpx 0;
+}
+.addr_fm .phone {
+  display: flex;
+  margin-top: 30rpx;
+  margin-left: 30rpx;
+  margin-right: 30rpx;
+}
+.addr_fm .phone .phone_text {
+  flex: 1;
+  font-size: 33rpx;
+  padding: 10rpx 0;
+}
+.addr_fm .phone .input_phone {
+  height: 80rpx;
+  border-radius: 20rpx;
+  background-color: #f0f0f0;
+  flex: 3;
+  padding-left: 30rpx;
+  font-size: 26rpx;
+}
+.addr_fm .address {
+  display: flex;
+  margin-top: 30rpx;
+  margin-left: 30rpx;
+  margin-right: 30rpx;
+}
+.addr_fm .address .address_text {
+  flex: 1;
+  font-size: 33rpx;
+  padding: 10rpx 0;
+}
+.addr_fm .address .input_address {
+  height: 180rpx;
+  border-radius: 20rpx;
+  background-color: #f0f0f0;
+  flex: 3;
+  font-size: 26rpx;
+  padding-left: 30rpx;
+  padding-top: 30rpx;
+}
+.addr_fm .body-view {
+  display: flex;
+  margin-top: 30rpx;
+  margin-left: 30rpx;
+  margin-right: 30rpx;
+}
+.addr_fm .body-view .address_isdefault {
+  flex: 1;
+  font-size: 33rpx;
+  padding: 10rpx 0;
+}
+.addr_fm .body-view .switch-view {
+  height: 180rpx;
+  border-radius: 20rpx;
+  flex: 3;
+  font-size: 26rpx;
+}
+.save {
+  height: 100rpx;
+  border-radius: 30rpx;
+  margin-top: 100rpx;
+  margin-left: 7%;
+  margin-right: 7%;
+  color: #ffffff;
+  font-size: 35rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to right, #19eda6, #17b4bd);
+}
+.del {
+  height: 100rpx;
+  border-radius: 30rpx;
+  margin-top: 30rpx;
+  margin-left: 7%;
+  margin-right: 7%;
+  color: #ffffff;
+  font-size: 35rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to right, #ff0000, #c91414);
+}

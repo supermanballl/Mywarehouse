@@ -1,0 +1,7 @@
+<view class="search">
+    <navigator url="/pages/search/index" open-type="navigate">
+        <image class="find_icon" src="/img/搜索图标.png" mode="widthFix" lazy-load="false"/>
+        <view class="find_title">请输入搜索内容</view>
+        <view class="find_text">搜索</view>
+    </navigator>
+</view>

@@ -1,0 +1,25 @@
+.navBackImg {
+  width: 45rpx;
+  height: 45rpx;
+  margin-left: 40rpx;
+}
+
+.headerNav {
+  display: flex;
+  align-items: center;
+}
+
+.navTitle {
+  font-family: 'Arial';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 30rpx;
+  line-height: 34rpx;
+  color: #000000;
+  width: 100%;
+  /* margin-right是根据左侧返回图标和返回图标margin-left的计算值，
+  为了可以让导航标题配合flex布局在任何页面中居中 */
+  margin-right: 85rpx;
+  display: flex;
+  justify-content: center;
+}

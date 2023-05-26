@@ -1,0 +1,70 @@
+page {
+  background-color: #edece8;
+  padding-bottom: 100rpx;
+}
+.payimg {
+  width: 100%;
+  height: 400rpx;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.payimg image {
+  width: 100%;
+  height: 100%;
+}
+.pricetext {
+  font-size: 40rpx;
+  display: flex;
+}
+.pricetext .price {
+  flex: 1;
+  text-align: right;
+}
+.pricetext .price1 {
+  flex: 1;
+  color: red;
+}
+.text {
+  color: black;
+  width: 90%;
+  margin-top: 30rpx;
+  margin-left: 5%;
+  background-color: #fff;
+  border-radius: 30rpx;
+  font-size: 35rpx;
+}
+.text .address {
+  margin-top: 30rpx;
+  margin-left: 30rpx;
+  margin-right: 30rpx;
+}
+.text .time {
+  margin-top: 30rpx;
+  margin-left: 30rpx;
+  margin-right: 30rpx;
+}
+.text .type {
+  margin-top: 30rpx;
+  margin-left: 30rpx;
+  margin-right: 30rpx;
+}
+.text .number {
+  margin-top: 30rpx;
+  margin-left: 30rpx;
+  margin-right: 30rpx;
+}
+.btn {
+  width: 80%;
+  height: 100rpx;
+  background-color: #29a784;
+  margin-top: 30rpx;
+  margin-left: 10%;
+  color: #fff;
+  font-size: 40rpx;
+  border-radius: 30rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

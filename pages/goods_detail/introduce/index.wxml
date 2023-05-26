@@ -1,0 +1,33 @@
+<view class="icon_img">
+  <image
+    class=""
+    src="{{img_url}}"
+    mode="aspectFill"
+  />
+
+</view>
+<view class="content">
+  <view class="title">
+    {{title}}
+  </view>
+  <view style="margin-left:30rpx;margin-right:30rpx">
+    <rich-text class="" nodes="{{html}}">
+
+    </rich-text>
+  </view>
+</view>
+
+<view class="back" bindtap="goToDetail">
+  <image
+    class="gifshow1"
+    src="http://47.92.30.79/images/cart/1.gif"
+    mode="aspectFit"
+  />
+  返回详情
+  <image
+    class="gifshow2"
+    src="http://47.92.30.79/images/cart/1.gif"
+    mode="aspectFit"
+  />
+</view>
+

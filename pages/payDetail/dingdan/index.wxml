@@ -1,0 +1,20 @@
+<image
+  class="payimg"
+  src="{{payImg}}"
+  mode="aspectFit"
+  lazy-load="false"
+  style="height:700rpx"
+/>
+<view class="pricetext">
+  <view class="price">支付金额：</view>
+  <view class="price1">￥{{ddlist[0].allprice}}</view>
+</view>
+
+<view class="text">
+  <view class="address">领取地点：翰墨楼</view>
+  <view class="time">领取时间：上午9点-11点，下午2点-5点</view>
+  <view class="type">领取方式：支付记录+订单号</view>
+  <view class="number">订单号：{{ddlist[0].DDNumber}}</view>
+</view>
+<view class="btn" bindtap="gotoDD">查看我的订单</view>
+

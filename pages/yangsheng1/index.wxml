@@ -1,0 +1,18 @@
+<view class="bg">
+  <view class="time_view">
+    {{time}}
+  </view>
+</view>
+
+<view class="context">
+  <view class="title">{{yangsheng[0].title}}</view>
+  <view class="title_text">{{yangsheng[0].title_text}}</view>
+  <view class="function1_title">{{yangsheng[0].function1_title}}</view>
+  <view class="rich1">
+    <rich-text class="function1_text" nodes="{{yangsheng[0].funtion1_text}}"></rich-text>
+  </view>
+
+  <view class="function2_title">{{yangsheng[0].function2_title}}</view>
+  <rich-text class="function2_text" nodes="{{yangsheng[0].funtion2_text}}"></rich-text>
+</view>
+

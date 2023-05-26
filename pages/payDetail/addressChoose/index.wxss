@@ -1,0 +1,53 @@
+page {
+  background-color: #edece8;
+}
+.forData {
+  margin-top: 30rpx;
+  margin-left: 5%;
+  width: 90%;
+  background-color: #fff;
+  border-radius: 30rpx;
+}
+.forData .addressitem {
+  display: flex;
+  margin-left: 30rpx;
+}
+.forData .addressitem .addressMsg {
+  flex: 9;
+  justify-content: center;
+  align-items: center;
+}
+.forData .addressitem .addressMsg .obscure_address {
+  margin-top: 15rpx;
+  font-size: 35rpx;
+  font-weight: 600;
+}
+.forData .addressitem .addressMsg .personMsg {
+  display: flex;
+  margin-top: 15rpx;
+  font-size: 30rpx;
+  color: #5a5a5a;
+}
+.forData .addressitem .addressMsg .personMsg .contact_name {
+  flex: 1;
+  margin-top: 15rpx;
+  margin-bottom: 15rpx;
+}
+.forData .addressitem .addressMsg .personMsg .phone {
+  flex: 1;
+  margin-top: 15rpx;
+  margin-bottom: 15rpx;
+}
+.forData .addressitem .edit {
+  flex: 1;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+.forData .addressitem .edit .edit_img {
+  width: 40rpx;
+}
+.forData .hengxian {
+  border-radius: 1rpx;
+  border-bottom: 3rpx solid #707070;
+}

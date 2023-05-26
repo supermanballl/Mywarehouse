@@ -1,0 +1,131 @@
+<!-- <view class="detail_swiper">
+  <swiper
+    autoplay
+    circular
+    indicator-dots
+  >
+    <swiper-item
+      wx:for="{{pics}}"
+      wx:key="*this"
+      bindtap="handlePrevewImage"
+      data-url="{{item}}"
+    >
+      <image mode="widthFix" src="{{item}}"></image>
+    </swiper-item>
+  </swiper>
+</view> -->
+
+<view class="swiper_wrapper">
+  <swiper
+    autoplay
+    indicator-dots
+    indicator-color="#8FA2EF"
+    indicator-active-color="#2F54EB"
+    class="swiper_two"
+    previous-margin="150rpx"
+    next-margin="150rpx"
+    circular
+    bindchange="handleChangeTwo"
+  >
+    <block wx:for="{{pics}}" wx:key="key">
+      <swiper-item class="item">
+        <image
+          mode="aspectFit"
+          class="swiper_two_img {{currentIndex4 == index ? 'active' : ''}}"
+          src="{{item}}"
+        />
+      </swiper-item>
+    </block>
+  </swiper>
+</view>
+
+<view class="goods_price">￥{{goods_price}}</view>
+<view class="goods_name_row">
+  <view class="goods_name">{{goods_name}}</view>
+  <view plain='true' class="circle">
+    <view class="iconposition" bindtap="handledianzan">
+      <iconfont name="{{isDianzan?'dianzan1':'dianzan2'}}"></iconfont>
+    </view>
+    <view class="collect_text">点赞</view>
+  </view>
+  <view class="goods_collect" bindtap="handleCollect">
+    <iconfont name="{{isCollect?'shoucang2':'shoucang1'}}"></iconfont>
+
+    <!-- <text class="iconfont   {{isCollect?'icon-shoucang1':'icon-shoucang'}} "></text> -->
+    <view class="collect_text">收藏</view>
+  </view>
+
+</view>
+<view
+  class="btn"
+  data-id="1"
+  bindtap="goToIntroduce"
+>
+  <view class="introduce">
+    产品介绍
+  </view>
+  <view
+    class="using"
+    data-id="2"
+    bindtap="goToIntroduce"
+  >
+    使用说明
+  </view>
+</view>
+
+<!-- 图文详情开始 -->
+<view class="goods_info">
+  <view class="goods_info_title">图文详情</view>
+  <view class="goods_info_content">
+    <!-- 富文本 -->
+    <!-- {{goodsObj.goods_introduce}} -->
+    <!-- <rich-text nodes="{{goods_introduce}}"></rich-text> -->
+    <view
+      class="pics_xiangqing"
+      wx:for="{{goods_introduce}}"
+      wx:key="*this"
+    >
+      <image
+        class="content_xiangqing"
+        src="{{item}}"
+        mode="aspectFit"
+        lazy-load="false"
+        binderror=""
+        bindload=""
+      />
+    </view>
+  </view>
+</view>
+<!-- 图文详情结束 -->
+
+<!-- 底部按钮开始 -->
+<view class="btm_tool">
+  <view class="tool_item">
+    <iconfont name="kefu"></iconfont>
+    <view>客服</view>
+    <button open-type="contact"></button>
+  </view>
+  <view class="tool_item">
+    <iconfont name="ziyuan"></iconfont>
+    <view>分享</view>
+    <button open-type="share" data-id="{{goods_id}}"></button>
+  </view>
+  <view
+    bindtap="goToCart"
+    open-type="switchTab"
+    url="/pages/cart/index"
+    class="tool_item"
+  >
+    <iconfont name="xingzhuanggongnengtubiao-"></iconfont>
+    <view>购物车</view>
+  </view>
+  <view class="tool_item btn_cart " bindtap="handleCartAdd">
+    加入购物车
+  </view>
+  <view class="tool_item btn_buy" bindtap="handlepay">
+    立即购买
+  </view>
+</view>
+<!-- 底部按钮结束 -->
+<!-- 点赞 -->
+

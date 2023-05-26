@@ -1,0 +1,9 @@
+<!--Loading-->
+<view class="loading-background" bindtap="goToFront_page">
+  <image
+    class="loading"
+    src="http://47.92.30.79/images/front_page/启动页.png"
+    mode="aspectFill"
+  />
+</view>
+

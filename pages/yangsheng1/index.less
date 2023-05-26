@@ -1,0 +1,87 @@
+.bg{
+    width: 100%;
+    height: 250rpx;
+    background-color: rgb(85, 85, 85);
+    text-align: center;
+    .time_view{
+        width: 70%;
+        height: 250rpx;
+        // margin-top: 30rpx;
+        margin-left: 15%;
+        border-radius: 50rpx 50rpx 0rpx 0rpx;
+        background-color: rgb(102, 255, 176);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 80rpx;
+        font-family: cursive;
+		font-weight:bolder; /*设置字体粗细*/
+		color:#FFFFFF; /*设置文字颜色*/
+		cursor:pointer; /*设置光标形状*/
+		-webkit-animation:light 1.5s ease-in-out infinite alternate;/*设置动画*/
+    }
+    @-webkit-keyframes light{/*创建动画*/
+        from{
+            text-shadow:0 0 10px #fff,
+                           0 0 20px #fff,
+                           0 0 30px #fff,
+                           0 0 40px #0000FF,
+                           0 0 70px #0000FF,
+                           0 0 80px #0000FF,
+                           0 0 100px #0000FF,
+                           0 0 150px #0000FF;
+        }
+        to{
+            text-shadow:0 0 5px #fff,
+                           0 0 10px #fff,
+                           0 0 15px #fff,
+                           0 0 20px #0000FF,
+                           0 0 35px #0000FF,
+                           0 0 40px #0000FF,
+                           0 0 50px #0000FF,
+                           0 0 75px #0000FF;
+        }
+
+     }
+}
+.context{
+    width: 100%;
+    //height: 300rpx;
+    position: relative;
+    top: -30rpx;
+    background-color: rgb(255, 246, 192);
+    border-radius: 30rpx 30rpx 0rpx 0rpx;
+    .title{
+        padding-top: 50rpx;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 60rpx;
+        font-family: cursive;
+		font-weight:bolder; /*设置字体粗细*/
+    }
+    .title_text{
+        text-indent: 40rpx;
+        line-height:70rpx;
+        font-size:30rpx;
+        margin-left: 50rpx;
+        margin-right: 50rpx;
+        font-family: 'Courier New', Courier, monospace;
+    }
+    .function1_title{
+        padding-top: 50rpx;
+        padding-bottom: 50rpx;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 60rpx;
+        font-family: cursive;
+		font-weight:bolder; /*设置字体粗细*/
+    }
+    .rich1{
+        margin-left: 50rpx;
+        margin-right: 50rpx;
+    }
+    .function2_title{}
+    .function2_text{}
+}

@@ -1,0 +1,212 @@
+<find bindtap="gotoSearch"></find>
+<!--  轮播图  -->
+<view class="index_swiper">
+  <swiper
+    class="swiper"
+    autoplay="{{true}}"
+    indicator-dots="{{true}}"
+    circular="{{true}}"
+    width="100%"
+  >
+    <swiper-item wx:for="{{fileList}}" wx:key="*this">
+      <navigator open-type="navigate">
+        <!-- mode="widthFix":高度自适应，宽度随高度等比例变化  -->
+        <image src="{{item.img_url}}" mode="widthFix" />
+      </navigator>
+    </swiper-item>
+  </swiper>
+</view>
+<view class="page_menu">
+  <ul>
+    <li bindtap="goToNation_treat">
+      <image
+        class="menu_img"
+        src="http://47.92.30.79/images/front_page/民族诊疗.png"
+        mode="widthFix"
+        lazy-load="false"
+        binderror=""
+        bindload=""
+      />
+      <view class="menu_text">民族诊疗</view>
+    </li>
+    <li bindtap="goToP_video">
+      <image
+        class="menu_img"
+        src="http://47.92.30.79/images/front_page/果帕雅视界.png"
+        mode="widthFix"
+        lazy-load="false"
+        binderror=""
+        bindload=""
+      />
+      <view class="menu_text">果帕雅视界</view>
+    </li>
+    <li bindtap="goToYanngsheng">
+      <image
+        class="menu_img"
+        src="http://47.92.30.79/images/front_page/民族养生.png"
+        mode="widthFix"
+        lazy-load="false"
+        binderror=""
+        bindload=""
+      />
+      <view class="menu_text">民族养生</view>
+    </li>
+    <li>
+      <image
+        class="menu_img"
+        src="http://47.92.30.79/images/front_page/联系我们.png"
+        mode="widthFix"
+        bindtap="goToLXWM"
+      />
+      <view class="menu_text">联系我们</view>
+    </li>
+  </ul>
+</view>
+<view class="new">
+  <view class="new_title">
+    <view class="text_title">———最新资讯———</view>
+    <view class="text_more" bindtap="goToNews">了解更多</view>
+  </view>
+  <view class="item">
+    <view class="new_item1">
+      <view class="img_view" bindtap="goToP_video">
+        <video
+          class="item2_img1"
+          custom-cache="{{false}}"
+          src="{{video.src}}"
+        ></video>
+        <!-- <image  src="../../img/资讯1.png" mode="heightFix" lazy-load="false" /> -->
+      </view>
+      <view class="item1_text">
+        <view class="text_title">{{video.title}}</view>
+        <view class="text_content">{{video.text}}</view>
+        <view class="text_time">{{video.time}}</view>
+      </view>
+    </view>
+
+    <view class="new_item2">
+      <view class="item2_1">
+        <image
+          class="item2_img1"
+          src="{{news[1].imgList[0]}}"
+          mode="widthFix"
+          data-newsid="{{news[1].newsId}}"
+          bindtap="goToNewsDetail"
+        />
+        <view class="item1_text1">
+          <view class="text1_title">
+            <text>
+              {{news[1].title}}
+            </text>
+          </view>
+          <!-- <view class="text1_content">中药材中的“优等生”，比你想象中更神奇。</view> -->
+        </view>
+      </view>
+
+      <view class="item2_2">
+        <image
+          class="item2_img2"
+          src="{{news[2].imgList[0]}}"
+          mode="widthFix"
+          data-newsid="{{news[2].newsId}}"
+          bindtap="goToNewsDetail"
+        />
+        <view class="item1_text2">
+          <view class="text2_title">
+            <text>
+              {{news[2].title}}
+            </text>
+          </view>
+          <!-- <view class="text2_content">具有敛肺，涩肠，生津，安蛔之功效。</view> -->
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+<!-- 商品列表开始 -->
+<view class="goods">
+  <view class="goods_title">———定制商品———</view>
+  <view class="goods_item">
+
+    <view class='content'>
+      <view class='left'>
+        <block wx:for="{{goods}}" wx:key="*this">
+          <view
+            class="goods_detail"
+            bindtap="frontToCart"
+            data-id="{{item.goods_id}}"
+          >
+            <view class="goods_img">
+              <image
+                class=""
+                src="{{item.src}}"
+                mode="aspectFill"
+                style="width: 100%; height: 100%"
+              />
+            </view>
+            <view class="goods_text">
+              <view class="goods_name">{{item.goods_title}}</view>
+              <view class="text_view">
+                <view class="goods_price">￥{{item.goods_price}}</view>
+                <view class="goods_howBuy">/{{item.goods_howBuy}}</view>
+                <view class="goods_num">{{item.goods_xiaoliang}}+定制</view>
+                <view class="goods_cart">
+                  <image
+                    src="http://47.92.30.79/images/front_page/购物车.png"
+                    style="width: 100%; height: 100%"
+                    mode="aspectFit"
+                    lazy-load="false"
+                    binderror=""
+                    bindload=""
+                  />
+                </view>
+              </view>
+            </view>
+          </view>
+        </block>
+      </view>
+      <view class='right'>
+        <block wx:for="{{goods1}}" wx:key="*this">
+          <view
+            class="goods_detail"
+            bindtap="frontToCart"
+            data-id="{{item.goods_id}}"
+          >
+            <view class="goods_img">
+              <image
+                class=""
+                src="{{item.src}}"
+                mode="aspectFill"
+                style="width: 100%; height: 100%"
+                lazy-load="false"
+                binderror=""
+                bindload=""
+              />
+            </view>
+            <view class="goods_text">
+              <view class="goods_name">{{item.goods_title}}</view>
+              <view class="text_view">
+                <view class="goods_price">￥{{item.goods_price}}</view>
+                <view class="goods_howBuy">/{{item.goods_howBuy}}</view>
+                <view class="goods_num">{{item.goods_xiaoliang}}+定制</view>
+                <view class="goods_cart">
+                  <image
+                    src="http://47.92.30.79/images/front_page/购物车.png"
+                    style="width: 100%; height: 100%"
+                    mode="aspectFit"
+                    lazy-load="false"
+                    binderror=""
+                    bindload=""
+                  />
+                </view>
+              </view>
+            </view>
+          </view>
+        </block>
+      </view>
+    </view>
+  </view>
+
+</view>
+<!-- 商品列表结束 -->
+

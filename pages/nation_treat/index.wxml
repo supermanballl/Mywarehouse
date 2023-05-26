@@ -1,0 +1,186 @@
+<view class="content">
+  <!-- 左侧导航栏开始 -->
+  <view class='left'>
+    <view wx:for="{{menu_list}}" wx:key="id">
+
+      <view
+        class="{{flag==item.mid?'select':'normal'}} "
+        id="{{item.mid}}"
+        bindtap='switchNavLeft'
+      >
+        {{item.menu_name}}
+      </view>
+    </view>
+  </view>
+  <!-- 左侧导航栏结束 -->
+  <!-- 右侧内容开始 -->
+  <view class='right'>
+    <view class='category'>
+      <swiper
+        current='{{currentTab}}'
+        style='height:1100rpx'
+        vertical="{{true}}"
+        bindchange="switchTab"
+      >
+        <view
+          class="item_detail"
+          wx:for="{{menu_list}}"
+          wx:key="*this"
+        >
+          <swiper-item id="{{item.mid}}">
+            <!--  轮播图开始  -->
+            <view class="index_swiper">
+              <swiper
+                mode="widthFix"
+                class="swiper"
+                autoplay="{{true}}"
+                indicator-dots="{{true}}"
+                circular="{{true}}"
+                width="100%"
+              >
+                <swiper-item wx:for="{{fileList}}" wx:key="id">
+                  <navigator open-type="navigate">
+                    <!-- mode="widthFix":高度自适应，宽度随高度等比例变化  -->
+                    <image src="{{item.img_url}}" mode="widthFix" />
+                  </navigator>
+                </swiper-item>
+              </swiper>
+            </view>
+            <!-- 轮播图结束 -->
+            <!-- 理论学说开始 -->
+            <view class="Treat_Theory">
+              <view class="theory_title">
+                <image
+                  class=""
+                  src="http://47.92.30.79/images/nation_treat/理论学说.png"
+                  mode="aspectFit"
+                  lazy-load="false"
+                  binderror=""
+                  bindload=""
+                />
+              </view>
+              <scroll-view
+                class="recommend_scroll"
+                enable-flex
+                scroll-x
+              >
+                <view class="Treat_Theory1">
+                  <view class="theory_item">
+                    <image
+                      class="img_views"
+                      src=""
+                      mode="aspectFit"
+                    />
+                  </view>
+                  <view wx:for="{{ Treat_Theory }}" wx:key="*this">
+                    <view
+                      class="theory_item1"
+                      data-id="{{item.id}}"
+                      data-llid="{{item.ll_id}}"
+                      bindtap="showTheory_ll"
+                    >
+                      {{item.ll_txt}}
+                      <image
+                        class="item_img"
+                        src="{{item.ll_imgurl}}"
+                        mode="aspectFit"
+                      />
+                    </view>
+                  </view>
+                </view>
+              </scroll-view>
+            </view>
+            <!-- 理论学说结束 -->
+            <!-- 诊法开始 -->
+            <view class="Treat_Theory">
+              <view class="theory_title">
+                <image
+                  class=""
+                  src="http://47.92.30.79/images/nation_treat/诊法.png"
+                  mode="aspectFit"
+                  lazy-load="false"
+                />
+              </view>
+              <scroll-view
+                class="recommend_scroll"
+                enable-flex
+                scroll-x
+              >
+                <view class="Treat_Theory1">
+                  <view class="theory_item">
+                    <image
+                      class="img_views"
+                      src=""
+                      mode="aspectFit"
+                      lazy-load="false"
+                    />
+                  </view>
+                  <view wx:for="{{ Treat_Theory1}}" wx:key="*this">
+                    <view
+                      class="theory_item1"
+                      data-id="{{item.id}}"
+                      data-zfid="{{item.zf_id}}"
+                      bindtap="showTheory_zf"
+                    >
+                      {{item.zf_txt}}
+                      <image
+                        class="item_img"
+                        src="{{item.zf_imgurl}}"
+                        mode="aspectFit"
+                      />
+                    </view>
+                  </view>
+                </view>
+              </scroll-view>
+            </view>
+            <!-- 诊法结束 -->
+
+            <!-- 疗法开始 -->
+            <view class="Treat_Theory">
+              <view class="theory_title">
+                <image
+                  class=""
+                  src="http://47.92.30.79/images/nation_treat/疗法.png"
+                  mode="aspectFit"
+                />
+              </view>
+              <scroll-view
+                class="recommend_scroll"
+                enable-flex
+                scroll-x
+              >
+                <view class="Treat_Theory1">
+                  <view class="theory_item">
+                    <image
+                      class="img_views"
+                      src=""
+                      mode="aspectFit"
+                    />
+                  </view>
+                  <view wx:for="{{ Treat_Theory2}}" wx:key="*this">
+                    <view
+                      class="theory_item1"
+                      data-id="{{item.id}}"
+                      data-lfid="{{item.lf_id}}"
+                      bindtap="showTheory_lf"
+                    >
+                      {{item.lf_txt}}
+                      <image
+                        class="item_img"
+                        src="{{item.lf_imgurl}}"
+                        mode="aspectFit"
+                      />
+                    </view>
+                  </view>
+                </view>
+              </scroll-view>
+            </view>
+            <!-- 疗法结束 -->
+          </swiper-item>
+        </view>
+      </swiper>
+    </view>
+  </view>
+  <!-- 右侧内容结束 -->
+</view>
+

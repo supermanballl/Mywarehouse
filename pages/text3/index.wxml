@@ -1,0 +1,34 @@
+<mp-video-swiper
+  class="video-swiper"
+  video-list="{{videoList}}"
+  bindplay="onPlay"
+  bindpause="onPause"
+  bindtimeupdate="onTimeUpdate"
+  bindended="onEnded"
+  binderror="onError"
+  bindwaiting="onWaiting"
+  bindprogress="onProgress"
+  bindloadedmetadata="onLoadedMetaData"
+  bindchange="onChange"
+  bindshowPause="onShowPause"
+  bindhidePause="onHidePause"
+></mp-video-swiper>
+<image
+  wx:if="{{!isPlaying}}"
+  class="imagePlayer"
+  style="left:{{systemInfo.screenWidth/2-40/2}}px;top:{{systemInfo.screenHeight/2-40/2}}px"
+  src="./player.png"
+>
+
+</image>
+<view class="viewFloat">
+  <view class="videoTitle">{{videoList[activeId-1].title}}</view>
+  <view class="videoDes">{{videoList[activeId-1].desc}}</view>
+</view>
+<view class="viewTabContainer">
+  <view class="viewTab">首页</view>
+  <view class="viewTab">动态</view>
+  <view class="viewTab">商品</view>
+  <view class="viewTab">我的</view>
+</view>
+

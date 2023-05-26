@@ -1,0 +1,25 @@
+<view class="page" wx:if="{{loading}}">
+  <scroll-view
+    scroll-y='true'
+    style="height:100%;"
+    scroll-y="{{true}}"
+  >
+    <view class="news_box">
+      <text class="news_title">{{newsdetail.title}}</text>
+      <view class="news_info">
+        <text class="news_source">{{newsdetail.source}}</text>
+        <text class="news_date">{{newsdetail.ptime}}</text>
+      </view>
+      <image
+        class="news_bigger_image"
+        mode="aspectFill"
+        src="{{newsdetail.cover}}"
+      ></image>
+      <rich-text class="news_content" nodes="{{newsdetail.content}}">
+
+      </rich-text>
+
+    </view>
+  </scroll-view>
+</view>
+

@@ -1,0 +1,49 @@
+<view class="list-page" wx:if="{{flag}}">
+  <view
+    class="list-item {{item.isTouchMove?'list-item-touch-active':''}}"
+    wx:for="{{list}}"
+    wx:for-item="item"
+    wx:for-index="index"
+    wx:key="item.id"
+    bindtouchstart="touchstart"
+    bindtouchmove="touchmove"
+    data-id="{{item.goods_id}}"
+  >
+
+    <view class="item-content">
+      <view class="txt">
+        <view class="img">
+          <image
+            src="http://47.92.30.79/images/goods_detail/1.jpg"
+            mode="aspectFit"
+            style="width: 100%; height: 100%"
+            lazy-load="false"
+          />
+        </view>
+        <view class="text">{{item.goods_title}}</view>
+      </view>
+    </view>
+
+    <view
+      class="item-delete"
+      bindtap="delList"
+      data-id="{{ item.goods_id }}"
+    >删除
+    </view>
+  </view>
+</view>
+<view
+  class="shoucang"
+  style="margin-top:200rpx"
+  wx:else
+>
+  <image
+    class=""
+    src="http://47.92.30.79/images/goods_detail/暂无.gif"
+    mode="widthFix"
+    lazy-load="false"
+    style="width:100%"
+  />
+
+</view>
+

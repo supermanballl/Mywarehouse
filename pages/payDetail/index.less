@@ -1,0 +1,162 @@
+page{
+    background-color: #edece8;
+}
+
+.address{
+    display: flex;
+    background-color: #fff;
+    margin-top: 30rpx;
+    margin-left: 30rpx;
+    margin-right: 30rpx;
+    padding-top: 30rpx;
+    padding-bottom: 30rpx;
+    border-radius: 30rpx;
+    .img{
+        flex:1; 
+        display: flex;
+        justify-content: center;
+        align-items: center;   
+    }
+    .text{
+        flex: 5;
+        .didian{
+            font-size: 30rpx;
+        }
+        .name{
+            margin-top: 20rpx;
+            color: rgb(103, 103, 103);
+        }
+    }
+    .gotoaddress{
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+.dingdan{
+    background-color: #fff;
+    margin-top: 30rpx;
+    margin-left: 30rpx;
+    margin-right: 30rpx;
+    padding-top: 30rpx;
+    padding-bottom: 130rpx;
+    border-radius: 30rpx; 
+        .goods_msg{
+            height: 200rpx;
+            display: flex;
+            .img{
+                flex: 3;
+                border-radius: 30rpx;
+                background-color: rgb(191, 53, 53);
+                overflow: hidden;
+                margin-left: 30rpx;
+                image{
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+            .goods_text{
+                flex: 6;
+                margin-left: 20rpx;
+                .goods_name{
+                    font-size: 35rpx;
+                    font-weight: bolder;
+                    margin-bottom: 20rpx;
+                }
+                .goods_introduce{
+                    display:-webkit-box;
+                    text-align: right;
+                    color: #5e5e5e;
+                    -webkit-line-clamp:3;
+                    overflow:hidden;
+                    text-overflow:ellipsis;
+                    -webkit-box-orient:vertical;
+                    word-break:break-all;
+                    color: rgb(126, 126, 126);
+                }
+            }
+            .price{
+                flex: 2;
+                margin-right: 10rpx;
+                font-size: 30rpx;
+                color: #ff0000;
+            }
+        }
+        .num{
+            display: flex;
+            margin-top: 50rpx;
+                margin-left: 30rpx;
+            .num_text{
+                flex: 3;
+                font-size: 30rpx;
+            }
+            .cart_num_tool {
+                flex: 3;
+                margin-left: 40%;
+                display: flex;
+                .num_edit {
+                  width: 55rpx;
+                  height: 55rpx;
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  border: 1rpx solid #ccc;
+                }
+            
+                .goods_num {
+                  width: 55rpx;
+                  height: 55rpx;
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                }
+              } 
+
+        }
+        
+        .remark{
+            margin-top: 50rpx;
+            margin-left: 30rpx;
+            display: flex;
+            .remarktext{
+                flex: 2;
+                font-size: 30rpx;
+                
+            }
+            .text{
+                flex: 5;
+                display:-webkit-box;
+                text-align: right;
+                color: #5e5e5e;
+                -webkit-line-clamp:1;
+                overflow:hidden;
+                text-overflow:ellipsis;
+                -webkit-box-orient:vertical;
+                word-break:break-all;
+            }
+            .jiantou{
+                flex: 1;
+            }
+        }   
+}
+.pay{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 100rpx;
+    background-color: #fff;
+    display: flex;
+    .pagbtn{
+        margin-left: 5%;
+        width: 90%;
+        height: 90%;
+        background-color: #29a784;
+        border-radius: 30rpx;
+        color: #fff;
+        font-size: 35rpx;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}

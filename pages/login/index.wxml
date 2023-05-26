@@ -1,0 +1,3 @@
+<!-- 微信授权登录页面 -->
+<button type="primary" bindtap="getUserProfile">登录</button>
+

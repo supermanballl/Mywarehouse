@@ -1,0 +1,60 @@
+/**可拖动悬浮按钮样式表**/
+.btn_Suspension {
+  position: fixed;
+  height: 100rpx;
+  width: 100rpx;
+  background-color: #29a784;
+  border-radius: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 99999;
+}
+.forData {
+  width: 90%;
+  margin-top: 30rpx;
+  margin-left: 30rpx;
+}
+.forData .addressitem {
+  display: flex;
+  background-color: #ebebeb;
+  border-radius: 30rpx;
+}
+.forData .addressitem .addressMsg {
+  flex: 9;
+  justify-content: center;
+  align-items: center;
+  margin-left: 30rpx;
+}
+.forData .addressitem .addressMsg .obscure_address {
+  margin-top: 15rpx;
+  font-size: 35rpx;
+  font-weight: 600;
+}
+.forData .addressitem .addressMsg .personMsg {
+  display: flex;
+  margin-top: 15rpx;
+  font-size: 30rpx;
+  color: #5a5a5a;
+}
+.forData .addressitem .addressMsg .personMsg .contact_name {
+  flex: 1;
+  margin-top: 15rpx;
+  margin-bottom: 15rpx;
+}
+.forData .addressitem .addressMsg .personMsg .phone {
+  flex: 1;
+  margin-top: 15rpx;
+  margin-bottom: 15rpx;
+}
+.forData .addressitem .edit {
+  margin-top: 30rpx;
+  margin-right: 30rpx;
+  flex: 1;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+.forData .addressitem .edit .edit_img {
+  width: 40rpx;
+}

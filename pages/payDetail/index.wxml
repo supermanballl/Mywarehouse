@@ -1,0 +1,131 @@
+<!-- 收货地址选择 -->
+<view class="address" bindtap="chooseAddress">
+  <view class="img">
+    <image
+      src="http://47.92.30.79/images/user/定位.png"
+      mode="aspectFit"
+      style="width: 60%; height: 60%"
+    />
+  </view>
+  <view class="text">
+    <view class="didian">{{address.city+address.district+address.remark}}</view>
+    <view class="name">{{address.name+" "+address.phone}}</view>
+  </view>
+  <view class="gotoaddress">
+    <image
+      src="http://47.92.30.79/images/user/向右箭头.png"
+      mode="aspectFit"
+      style="width: 40%; height: 40%"
+    />
+  </view>
+</view>
+<!-- 订单信息 -->
+<view class="dingdan" wx:for="{{payList}}">
+  <!-- 商品信息 -->
+  <view class="goods_msg">
+    <view class="img">
+      <image src="{{item.src}}" mode="aspectFill" />
+    </view>
+
+    <view class="goods_text">
+      <view class="goods_name">{{item.goods_title}}</view>
+      <view class="goods_introduce">{{item.content}}</view>
+    </view>
+    <view class="price">￥{{item.goods_price}}</view>
+  </view>
+  <view class="num">
+    <view class="num_text">数量</view>
+    <view class="cart_num_tool">
+      <view
+        bindtap="handleItemNumEdit"
+        data-id="{{item.goods_id}}"
+        data-operation="{{-1}}"
+        class="num_edit"
+      >-
+      </view>
+      <view class="goods_num">{{item.cart_num}}</view>
+      <view
+        bindtap="handleItemNumEdit"
+        data-id="{{item.goods_id}}"
+        data-operation="{{1}}"
+        class="num_edit"
+      >+
+      </view>
+    </view>
+  </view>
+
+  <view
+    class="remark"
+    bindtap="btn"
+    data-id="{{item.goods_id}}"
+  >
+    <view class="remarktext">订单备注</view>
+    <view class="text">{{item.remark}}</view>
+    <view class="jiantou">
+      <image
+        src="http://47.92.30.79/images/user/向右箭头.png"
+        mode="aspectFit"
+        style="width: 90%; height: 90%"
+      />
+    </view>
+  </view>
+</view>
+
+<view class="pay">
+  <view class="pagbtn" bindtap="goToOrder">
+    支付 ￥{{allprice}}
+  </view>
+
+</view>
+
+<mp-half-screen-dialog
+  etClass="test"
+  show="{{show}}"
+  buttons="{{buttons}}"
+  bindbuttontap="bindButtonTap"
+  bindclose="bindClose"
+>
+  <view slot="title">
+    <text>订单备注</text>
+  </view>
+  <view slot="desc">
+    <view class="contant">
+      <textarea
+        style="background-color: #edece8;border-radius: 30rpx;padding-left: 30rpx;padding-top: 30rpx;padding-bottom: 30rpx;"
+        name="bindTextAreaBlur"
+        bindblur="getText"
+        bindinput="getValueLength"
+        show-confirm-bar='true'
+        value="{{editText}}"
+        bindconfirm="getText"
+        maxlength="{{max}}"
+        auto-focus
+      >
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </textarea>
+      <view class="currentWordNumber">{{currentWordNumber|0}}/{{max}}</view>
+    </view>
+  </view>
+  <view slot="footer">
+    <button
+      type="primary"
+      bindtap="remarkAdd"
+      data-id="{{item.goods_id}}"
+    >确定
+    </button>
+  </view>
+
+</mp-half-screen-dialog>
+

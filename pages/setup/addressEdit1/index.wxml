@@ -1,0 +1,70 @@
+<view class="addr_fm">
+  <view class="name">
+    <view class="name_text">收货人</view>
+    <input
+      class="input_name"
+      placeholder="姓名"
+      auto-focus="true"
+      value="{{getname}}"
+      bindinput='getInputName'
+    />
+  </view>
+  <view class="phone">
+    <view class="phone_text">手机号码</view>
+    <input
+      class="input_phone"
+      placeholder="手机号"
+      auto-focus="true"
+      value="{{getphone}}"
+      bindinput='getInputPhone'
+    />
+  </view>
+  <view class="area" bindtap="ChooeseAddress">
+    <view class="area_text">所在地区</view>
+    <input
+      class="input_area"
+      placeholder="省、市、区、街道"
+      auto-focus="true"
+      value="{{getarea}}"
+    />
+    <image
+      class="dingwei"
+      src="http://47.92.30.79/images/user/定位.png"
+      mode="aspectFit"
+      lazy-load="false"
+    />
+
+  </view>
+  <view class="address">
+    <view class="address_text">详细地址</view>
+    <textarea
+      class="input_address"
+      id=""
+      cols="30"
+      rows="10"
+      placeholder="小区楼栋/乡村名称"
+      value="{{getremark}}"
+      bindinput='getInputRemark'
+    ></textarea>
+  </view>
+  <view class="body-view">
+    <view class="address_isdefault">是否默认</view>
+    <switch
+      class='switch-view'
+      checked="{{switch1Checked}}"
+      bindchange="switch1Change"
+      type='switch'
+    />
+  </view>
+</view>
+<view class="save" bindtap="saveAddress">
+  保存
+</view>
+<view
+  class="del"
+  bindtap="delAddress"
+  hidden="{{hidden}}"
+>
+  删除
+</view>
+

@@ -1,0 +1,268 @@
+<!-- 个人中心页面 -->
+<image
+  class="user_bg"
+  mode="aspectFill"
+  src="http://47.92.30.79/images/user/我的背景.png"
+/>
+<view class="user_info_wrap">
+  <!-- 头像和昵称开始 -->
+  <view class="user_img_wrap">
+
+    <view class="user_zhao">
+      <image
+        class="user_shezhi"
+        src="http://47.92.30.79/images/user/设置.png"
+        mode="widthFix"
+        lazy-load="false"
+        binderror=""
+        bindload=""
+        bindtap="SetUp"
+      />
+      <view class="user_info" wx:if="{{userinfo.avatarUrl}}">
+        <view class="user_icon_top">
+          <image class="user_icon" src="{{userinfo.avatarUrl}}"></image>
+        </view>
+        <view class="text_nameAndId">
+          <view class="user_name">{{userinfo.nickName}}</view>
+          <view class="user_ID">ID:10866775</view>
+        </view>
+      </view>
+      <view class="user_info" wx:else>
+        <view class="user_icon_top">
+          <image
+            class="user_icon1"
+            bindtap="Login"
+            src="http://47.92.30.79/images/user/未登录头像.png"
+          ></image>
+        </view>
+        <view class="text_nameAndId">
+          <view class="user_name">点击头像登录</view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <!-- 头像和昵称结束 -->
+</view>
+
+<!-- 我的订单开始 -->
+<view class="my_dingdan">
+  <view class="dingdan_text">
+    <view class="text1">我的订单</view>
+    <view
+      class="text2"
+      bindtap="goToOrder"
+      data-id="0"
+    >查看全部订单
+    </view>
+    <view
+      class="text3"
+      bindtap="goToOrder"
+      data-id="0"
+    >
+      <image
+        src="http://47.92.30.79/images/user/向右箭头.png"
+        mode="aspectFit"
+        style="width: 80%; height: 80%"
+      />
+    </view>
+  </view>
+  <view class="hengxian"></view>
+  <view class="dingdan_icon">
+    <view
+      class="icon_fukuan"
+      bindtap="goToOrder"
+      data-id="1"
+    >
+      <image
+        class="icon_size"
+        src="http://47.92.30.79/images/user/待付款.png"
+        mode="aspectFit"
+        lazy-load="false"
+        binderror=""
+        bindload=""
+      />
+      <view class="icon_text">
+        待付款
+      </view>
+      <view class="panduan" wx:if="{{mydingdan_list.daifukuan==0}}">
+      </view>
+      <view class="pandaun1" wx:elif="{{mydingdan_list.daifukuan>0}}">
+        <view class="msg_show">
+          <view class="msg_txt">{{mydingdan_list.daifukuan}}</view>
+        </view>
+      </view>
+
+    </view>
+    <view
+      class="icon_fahuo"
+      bindtap="goToOrder"
+      data-id="2"
+    >
+      <image
+        class="icon_size"
+        src="http://47.92.30.79/images/user/待发货.png"
+        mode="aspectFit"
+        lazy-load="false"
+        binderror=""
+        bindload=""
+      />
+      <view class="icon_text">
+        待发货
+      </view>
+      <view class="panduan" wx:if="{{mydingdan_list.daifahuo==0}}">
+      </view>
+      <view class="pandaun1" wx:elif="{{mydingdan_list.daifahuo>0}}">
+        <view class="msg_show">
+          <view class="msg_txt">{{mydingdan_list.daifahuo}}</view>
+        </view>
+      </view>
+    </view>
+    <view
+      class="icon_shouhuo"
+      bindtap="goToOrder"
+      data-id="3"
+    >
+      <image
+        class="icon_size"
+        src="http://47.92.30.79/images/user/待收货.png"
+        mode="aspectFit"
+        lazy-load="false"
+        binderror=""
+        bindload=""
+      />
+      <view class="icon_text" bindtap="goToOrder">
+        待收货
+      </view>
+      <view class="panduan" wx:if="{{mydingdan_list.daishouhuo==0}}">
+      </view>
+      <view class="pandaun1" wx:elif="{{mydingdan_list.daishouhuo>0}}">
+        <view class="msg_show">
+          <view class="msg_txt">{{mydingdan_list.daishouhuo}}</view>
+        </view>
+      </view>
+    </view>
+
+    <view
+      class="icon_shouhou"
+      bindtap="goToOrder"
+      data-id="5"
+    >
+      <image
+        class="icon_size"
+        src="http://47.92.30.79/images/user/退换、售后.png"
+        mode="aspectFit"
+        lazy-load="false"
+        binderror=""
+        bindload=""
+      />
+      <view class="icon_text">
+        退换/售后
+      </view>
+      <view class="panduan" wx:if="{{mydingdan_list.tuihua==0}}">
+      </view>
+      <view class="pandaun1" wx:elif="{{mydingdan_list.tuihua>0}}">
+        <view class="msg_show">
+          <view class="msg_txt">{{mydingdan_list.tuihua}}</view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+<!-- 我的订单结束 -->
+
+<!-- 我的足迹开始 -->
+<view class="my_dingdan1">
+  <view class="dingdan_text1">
+    <view class="text11">我的足迹</view>
+  </view>
+  <view class="hengxian1"></view>
+  <view class="dingdan_icon1">
+    <view class="icon_fukuan1">
+      <image
+        class="icon_size1"
+        src="http://47.92.30.79/images/user/收藏.png"
+        mode="aspectFit"
+        lazy-load="false"
+        bindtap="Shoucang"
+      />
+      <view class="icon_text" bindtap="Shoucang">
+        收藏
+      </view>
+    </view>
+    <view class="icon_fahuo1">
+      <image
+        class="icon_size1"
+        src="http://47.92.30.79/images/user/点赞.png"
+        mode="aspectFit"
+        lazy-load="false"
+        binderror=""
+        bindload=""
+        bindtap="dianzan"
+      />
+      <view class="icon_text">
+        点赞
+      </view>
+    </view>
+    <view class="icon_shouhuo1">
+      <image
+        class="icon_size1"
+        src="http://47.92.30.79/images/user/分享.png"
+        mode="aspectFit"
+        lazy-load="false"
+        binderror=""
+        bindload=""
+        bindtap="fenxiang"
+      />
+      <view class="icon_text">
+        分享
+      </view>
+    </view>
+    <view class="icon_pingjia1">
+      <image
+        class="icon_size1"
+        src="http://47.92.30.79/images/user/关注.png"
+        mode="aspectFit"
+        lazy-load="false"
+        binderror=""
+        bindload=""
+        bindtap="liulan"
+      />
+      <view class="icon_text" bindtap="liulan">
+        浏览
+      </view>
+    </view>
+    <!-- <view class="icon_shouhou1">
+      <image
+        class="icon_size1"
+        src="http://47.92.30.79/images/user/评价.png"
+        mode="aspectFit"
+        lazy-load="false"
+        binderror=""
+        bindload=""
+      />
+     <view class="icon_text">
+        评价
+      </view>
+    </view> -->
+  </view>
+</view>
+<!-- 我的足迹结束 -->
+
+<!-- 客服开始 -->
+<!-- <button
+  class="btn_contact"
+  open-type="contact"
+  type="primary"
+>联系客服
+</button> -->
+<!-- 客服结束 -->
+
+<!-- 清除缓存开始 
+<button
+  class="btn_clear"
+  type="primary"
+  bindtap="clearAllStorage"
+>清除缓存
+</button> 
+清除缓存结束-->
+

@@ -1,0 +1,17 @@
+<view class="home-block">
+  <!-- 每日文章 -->
+  <view
+    class="article-block"
+    wx:for="{{ newsList }}"
+    wx:key="*this"
+    bindtap="goToNewsDetail"
+    data-newsid="{{ item.newsId }}"
+  >
+    <view class="article-text">
+      <view class="article-title">{{ item.title }}</view>
+      <view class="article-time">{{ item.postTime }}</view>
+    </view>
+    <image class="article-image" src="{{ item.imgList[0] }}"></image>
+  </view>
+</view>
+

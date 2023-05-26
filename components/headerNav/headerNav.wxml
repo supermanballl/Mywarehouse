@@ -1,0 +1,10 @@
+<view class="headerNav" style="margin-top:{{height*2+20}}rpx">
+  <image
+    src="http://47.92.30.79/images/nation_treat/向左箭头.png"
+    class="navBackImg"
+    bindtap="navigateBackPage"
+    style="visibility: {{showNavBackBtn?'unset':'hidden'}}"
+  ></image>
+  <view class="navTitle">{{text}}</view>
+</view>
+
